@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate the Fibonacci Number at a Specific Position</title>
+</head>
+<body>
+    <script>
+           function fibonacci(position) {
+  if (position <= 1) {
+    return position;
+  }
+
+  let prev = 0;
+  let current = 1;
+
+  for (let i = 2; i <= position; i++) {
+    const temp = current;
+    current = prev + current;
+    prev = temp;
+  }
+
+  return current;
+}
+
+const position = 10; // Replace with the desired position
+const result = fibonacci(position);
+console.log(`Fibonacci number at position ${position} is ${result}`);
+
+
+
+    </script>
+</body>
+</html>
